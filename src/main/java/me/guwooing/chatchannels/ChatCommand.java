@@ -5,6 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.permissions.Permission;
 
 public class ChatCommand implements CommandExecutor {
 
@@ -21,6 +22,10 @@ public class ChatCommand implements CommandExecutor {
         }
 
         Player player = ((Player) sender);
+
+        if (!player.hasPermission("chatchannels.staff")) {
+            return true;
+        }
 
         if (args.length != 1) {
             player.sendMessage(Utils.chat("&cUsage: /chat <channel> <message>"));

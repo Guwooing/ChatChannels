@@ -8,7 +8,7 @@ public final class ChatChannels extends JavaPlugin {
 
     public void onEnable() {
         getCommand("chat").setExecutor(new ChatCommand(this));
-        getServer().getPluginManager().registerEvents(new ChatListner(this), this);
+        getServer().getPluginManager().registerEvents(new ChatListener(this), this);
         this.channelManager = new ChannelManager();
     }
 

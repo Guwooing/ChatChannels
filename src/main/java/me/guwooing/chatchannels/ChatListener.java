@@ -7,11 +7,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-public class ChatListner implements Listener {
+public class ChatListener implements Listener {
 
     private ChatChannels plugin;
 
-    public ChatListner(ChatChannels plugin) {
+    public ChatListener(ChatChannels plugin) {
         this.plugin = plugin;
     }
 
