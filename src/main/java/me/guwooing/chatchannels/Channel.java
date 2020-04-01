@@ -2,7 +2,7 @@ package me.guwooing.chatchannels;
 
 public enum Channel {
 
-    GLOBAL("", "g", "[G] <player>: <message>"), STAFF("chatchannels.staff", "s", "[S] <player>: <message>");
+    GLOBAL("", "g", "<player>: &7<message>"), STAFF("chatchannels.staff", "s", "&b[S]&r &e<player>: <message>");
 
     private String permission, alias, format;
 
