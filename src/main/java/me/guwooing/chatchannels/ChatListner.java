@@ -5,6 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 
 public class ChatListner implements Listener {
 
@@ -28,6 +29,15 @@ public class ChatListner implements Listener {
             } else if (p.hasPermission(channel.getPermission())) {
                 p.sendMessage(format);
             }
+        }
+    }
+
+    @EventHandler
+    public void onPlayerJoin(PlayerJoinEvent e) {
+        Player p = e.getPlayer();
+        Channel channel = plugin.getChannelManager().getChannel(p.getUniqueId());
+        if (p.hasPermission("chatchannels.see")) {
+            p.sendMessage(Utils.chat("&b[CC] Your channel is currently in: &e&l" + channel));
         }
     }
 }
