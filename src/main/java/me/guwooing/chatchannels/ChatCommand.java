@@ -34,13 +34,13 @@ public class ChatCommand implements CommandExecutor {
 
         if (!channel.getPermission().equals("")) {
             if (!player.hasPermission(channel.getPermission())) {
-                player.sendMessage(Utils.chat("You need to permission &7(" + channel.getPermission() + ") &cto use that channel."));
+                player.sendMessage(Utils.chat("&cYou need to permission &7(" + channel.getPermission() + ") &cto use that channel."));
                 return true;
             }
         }
 
         plugin.getChannelManager().setChannel(player.getUniqueId(), channel);
-        player.sendMessage(Utils.chat("&aSet your chat channel to &e" + channel));
+        player.sendMessage(Utils.chat("&aSet your chat channel to &e&l" + channel));
         return true;
     }
 }
