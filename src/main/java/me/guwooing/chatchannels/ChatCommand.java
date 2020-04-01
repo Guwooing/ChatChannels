@@ -22,7 +22,7 @@ public class ChatCommand implements CommandExecutor {
         Player player = ((Player) sender);
 
         if (args.length != 1) {
-            player.sendMessage(Utils.chat("&cUsage: /chat <message>"));
+            player.sendMessage(Utils.chat("&cUsage: /chat <channel> <message>"));
             return true;
         }
 
