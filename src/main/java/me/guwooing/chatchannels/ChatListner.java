@@ -20,7 +20,7 @@ public class ChatListner implements Listener {
         e.setCancelled(true);
 
         Channel channel = plugin.getChannelManager().getChannel(player.getUniqueId());
-        String format = Utils.chat(channel.getFormat().replace("<player>", player.getName().replace("<message>", e.getMessage())));
+        String format = Utils.chat(channel.getFormat().replace("<player>", player.getName()).replace("<message>", e.getMessage()));
 
         for (Player p : Bukkit.getOnlinePlayers()) {
             if (channel.getPermission().equals("")) {
