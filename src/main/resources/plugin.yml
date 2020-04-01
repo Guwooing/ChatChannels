@@ -1,0 +1,8 @@
+name: ChatChannels
+main: me.guwooing.chatchannels.ChatChannels
+version: 0.0.1
+author: Guwooing
+description: Minecraft chat channels
+commands:
+  chat:
+    aliases: [c]
